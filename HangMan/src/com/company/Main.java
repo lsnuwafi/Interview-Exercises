@@ -24,10 +24,9 @@ public class Main {
 
         while (!gameOver){
             System.out.println(playerGusses);
-            char input = ' ';
-            if (input == ' ') {
-                input = sc.next().charAt(0);
-            }
+
+            char input = sc.next().charAt(0);
+
             tryTimes++;
             for(int i=0; i<selectedword.length(); i++){
                 if(selectedword.toCharArray()[i] == input){
@@ -39,7 +38,8 @@ public class Main {
             if (tryTimes == totalTimes || new String(playerGusses).indexOf('-') == -1 ){
                 gameOver = true;
             }
-            System.out.println("End game");
+
         }
+        System.out.println("End game");
     }
 }
